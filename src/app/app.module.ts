@@ -4,12 +4,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ExchangeRateComponent } from './exchange-rate/exchange-rate.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -23,9 +21,8 @@ import { MatSelectModule } from '@angular/material/select';
     FormsModule,
     HttpClientModule,
     MatCardModule,
-    MatToolbarModule,
-    MatFormFieldModule,
-    MatSelectModule
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

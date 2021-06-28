@@ -1,7 +1,7 @@
 
-export class Currency() {
-    id: Number;
-    code: String;
-    description: String;
+export class Currency {
+    id?: number;
+    code?: String;
+    description?: String;
 
-}
+};

@@ -1,47 +1,67 @@
-<div class="example-container">
-    <mat-toolbar>Consulta de Tipo de cambio</mat-toolbar>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"
+    id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-    <form [formGroup]="form" (ngSubmit)="calculateExchangeRate()">
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <!-- <form class="form-horizontal" action='' method="POST"> -->
+                <form [formGroup]="exchangeRateForm">
+                <fieldset>
+                    <div id="legend">
+                        <legend class="">Calcular Tipo de cambio</legend>
+                    </div>
+                    <div class="control-group">
+                        
+                        <label class="control-label" for="amountSource">Amount Source</label>
+                        <div class="controls">
+                            <input type="number" id="amountSource" formControlName="amountSource" placeholder="" class="input-xlarge" required>
+                        </div>
 
-        
-        <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
 
-            <mat-form-field appearance="outline" fxFlex="50">
-                <mat-label>Monto Original </mat-label>
-                <input matInput formControlName="amountSource" type="number" />
-                <mat-icon matSuffix class="disabled-text">user</mat-icon>
-            </mat-form-field>
+                        <label class="control-label" for="sourceSelect">Moneda Source</label>
+                        <div class="controls">
+                            <select id="sourceSelect" formControlName="sourceSelect" class="form-select" aria-label="Default select example">
+                                <option *ngFor='let currency of currencies' [value]="currency.code">
+                                {{currency.code}}
+                            </option>
+                            </select>
+                        </div>
+                        
 
-            <mat-form-field appearance="outline" fxFlex="50">
-                <mat-label>Grupo</mat-label>
-                <mat-select formControlName="currencySource">
-                    <mat-option *ngIf="currencies?.length === 0" [value]='Select'>Select</mat-option>
-                    <mat-option *ngFor="let currency of currencies" [value]="currency.id">
-                        {{currency.name}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-        </div> 
+                    </div>
+                    <div class="control-group">
+                        <!-- Password-->
+                        <label class="control-label" for="amountTarget">Amount Target</label>
+                        <div class="controls">
+                            <input type="number" id="amountTarget" formControlName="amountTarget" placeholder="" class="input-xlarge">
+                        </div>
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+                        <label class="control-label" for="targetSelect">Moneda Target</label>
+                        <div class="controls"> 
+                            <select id="targetSelect"  formControlName="targetSelect" class="form-select" aria-label="Default select example" >
+                                <option *ngFor='let currency of currencies' [value]="currency.code">
+                                {{currency.code}}
+                            </option>
+                            </select>
+                        </div>
 
-            <mat-form-field appearance="outline" fxFlex="50">
-                <mat-label>Monto Destino </mat-label>
-                <input matInput formControlName="amountTarget" type="number" />
-                <mat-icon matSuffix class="disabled-text">user</mat-icon>
-            </mat-form-field>
+                    </div>
+                    <div class="control-group">
+                        <!-- Button -->
+                        <div class="controls">
+                            <button class="btn btn-success" type="submit" (click)="calculateExchangeRate()" >Calcular</button>
+                        </div>
+                    </div>
+                </fieldset>
 
-            <mat-form-field appearance="outline" fxFlex="50">
-                <mat-label>Grupo</mat-label>
-                <mat-select formControlName="currencyTarget">
-                    <mat-option *ngIf="currencies?.length === 0" [value]='Select'>Select</mat-option>
-                    <mat-option *ngFor="let currency of currencies" [value]="currency.id">
-                        {{currency.name}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-        </div> 
+              
 
-    </form>
+            </form>
 
+            <mat-card *ngIf="error">{{error}}</mat-card>
+        </div>
+    </div>
 </div>

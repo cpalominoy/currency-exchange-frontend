@@ -16,11 +16,11 @@ Contraseña: challenge-jwt
 
 Para consultar el tipo de cambio se deberá considerar lo siguiente:
 
-Monto original: Monto al que se desea aplicar el cambio de moneda.
-Moneda Origen: Moneda del monto.
+- Monto original: Monto al que se desea aplicar el cambio de moneda.
+- Moneda Origen: Moneda del monto.
 
-Moneda Destino: Moneda al que se desea aplicar al monto para realizar el cambio.
-Monto Calculado: El monto aplicando el tipo de cambio de acuerdo a la moneda destino.
+- Moneda Destino: Moneda al que se desea aplicar al monto para realizar el cambio.
+- Monto Calculado: El monto aplicando el tipo de cambio de acuerdo a la moneda destino.
 
 # CurrencyExchangeFrontend
 

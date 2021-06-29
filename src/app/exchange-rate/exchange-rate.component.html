@@ -15,13 +15,13 @@
                     </div>
                     <div class="control-group">
                         
-                        <label class="control-label" for="amountSource">Amount Source</label>
+                        <label class="control-label" for="amountSource">Monto Original</label>
                         <div class="controls">
                             <input type="number" id="amountSource" formControlName="amountSource" placeholder="" class="input-xlarge" required>
                         </div>
 
 
-                        <label class="control-label" for="sourceSelect">Moneda Source</label>
+                        <label class="control-label" for="sourceSelect">Moneda Origen</label>
                         <div class="controls">
                             <select id="sourceSelect" formControlName="sourceSelect" class="form-select" aria-label="Default select example">
                                 <option *ngFor='let currency of currencies' [value]="currency.code">
@@ -34,12 +34,12 @@
                     </div>
                     <div class="control-group">
                         <!-- Password-->
-                        <label class="control-label" for="amountTarget">Amount Target</label>
+                        <label class="control-label" for="amountTarget">Monto Calculado</label>
                         <div class="controls">
                             <input type="number" id="amountTarget" formControlName="amountTarget" placeholder="" class="input-xlarge">
                         </div>
 
-                        <label class="control-label" for="targetSelect">Moneda Target</label>
+                        <label class="control-label" for="targetSelect">Moneda Destino</label>
                         <div class="controls"> 
                             <select id="targetSelect"  formControlName="targetSelect" class="form-select" aria-label="Default select example" >
                                 <option *ngFor='let currency of currencies' [value]="currency.code">

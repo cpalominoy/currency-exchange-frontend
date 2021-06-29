@@ -1,3 +1,27 @@
+# APlicacion
+
+Frontend para el servicio de consulta de tipo cambio por moneda ( https://github.com/cpalominoy/curreny-exchange-challenge)
+
+## Login
+
+<img src="https://github.com/cpalominoy/currency-exchange-frontend/blob/main/docs/login.png" alt="login"></a>
+
+Se deberá ingresar con la siguientes credenciales
+Usuario: admin.admin
+Contraseña: challenge-jwt
+
+## Consulta del Servicio Exchange-Rate
+
+<img src="https://github.com/cpalominoy/currency-exchange-frontend/blob/main/docs/search-exchange-rate.png" alt="service"></a>
+
+Para consultar el tipo de cambio se deberá considerar lo siguiente:
+
+Monto original: Monto al que se desea aplicar el cambio de moneda.
+Moneda Origen: Moneda del monto.
+
+Moneda Destino: Moneda al que se desea aplicar al monto para realizar el cambio.
+Monto Calculado: El monto aplicando el tipo de cambio de acuerdo a la moneda destino.
+
 # CurrencyExchangeFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.

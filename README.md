@@ -4,7 +4,7 @@ Frontend para el servicio de consulta de tipo cambio por moneda ( https://github
 
 ## Login
 
-<img src="https://github.com/cpalominoy/currency-exchange-frontend/blob/main/src/docs/login.png" alt="login"></a>
+<img src="https://github.com/cpalominoy/currency-exchange-frontend/blob/main/src/doc/login.png" alt="login"></a>
 
 Se deberá ingresar con la siguientes credenciales
 Usuario: admin.admin
@@ -12,7 +12,7 @@ Contraseña: challenge-jwt
 
 ## Consulta del Servicio Exchange-Rate
 
-<img src="https://github.com/cpalominoy/currency-exchange-frontend/blob/main/src/docs/search-exchange-rate.png" alt="service"></a>
+<img src="https://github.com/cpalominoy/currency-exchange-frontend/blob/main/src/doc/search-exchange-rate.png" alt="service"></a>
 
 Para consultar el tipo de cambio se deberá considerar lo siguiente:
 
